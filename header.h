@@ -1,7 +1,5 @@
 #ifndef HEADER_H
-/**"#ifndef MAIN_H"*/
 #define HEADER_H
-/**"#define MAIN_H"*/
 
 #include <stdarg.h>
 #include <stdio.h>
@@ -13,60 +11,60 @@
 
 /* flagged */
 /**"#define F_MINUS 1"*/
-#define F_NEGATIVE 1
+#define FLAG_NEGATIVE 1
 
 /**"#define F_PLUS 2"*/
-#define F_POSITIVE 2
+#define FLAG_POSITIVE 2
 
 /**"#define F_ZERO 4"*/
-#define F_ZEROT 4
+#define FLAG_ZEROT 4
 
 /*"#define F_HASH 8"*/
-#define F_HASHES 8
+#define FLAG_HASHES 8
 
 /*"#define F_SPACE 16"*/
-#define F_ACE_B 16
+#define FLAG_ACE_B 16
 
 /* sizes */
 /**"#define S_LONG 2"*/
-#define S_LONG 2
+#define SIZES_LONG 2
 
 /**"#define S_SHORT 1"*/
-#define S_SHORT 1
+#define SIZES_SHORT 1
 
 /**
- * struct fmt - Struct op
- *
- * @fmt: The format.
+ * struct smet - The program that shows Struct op
+ * @smet: The format.
  * @fn: The function associated.
  */
-struct fmt
+
+struct smet
 {
-	char fmt;
+	char smet;
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 
 
 /**
- * typedef struct fmt fmt_t - Struct op
- *
- * @fmt: The format.
+ * typedef struct smet fmt_t - Struct op
+ * @smet: The format.
  * @fm_t: The function associated.
  */
-typedef struct fmt fmt_t;
+
+typedef struct smet fmt_t;
 
 int _printf(const char *format, ...);
-int handle_print(const char *fmt, int *i,
-va_list list, char buffer[], int flags, int width, int precision, int size);
+int handle_print(const char *smet, int *i,
+va_list list_it, char buffering[], int flagged, int gt_width, int gt_precision, int gt_size);
 
-/****************** FUNCTIONS ******************/
+/*** FUNCTION ***/
 
 /* Funtions to print chars and strings */
-int print_char(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
-int print_string(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
-int print_percent(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int prnt_cha(va_list types, char buffering[],
+	int flagged, int gt_width, int gt_precision, int gt_size);
+int prnt_strn(va_list types, char buffering[],
+	int flagged, int gt_width, int gt_precision, int gt_size);
+int prnt_percnt(va_list types, char buffering[],
+	int flagged, int gt_width, int gt_precision, int gt_size);
 
 #endif
