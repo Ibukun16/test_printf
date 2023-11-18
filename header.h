@@ -6,30 +6,29 @@
 #include <unistd.h>
 
 #define UNUSED(x) (void)(x)
-/**"#define BUFF_SIZE 1024"*/
-#define TOTAL_SIZE 1024
+#define SIZE_BUF 1024
 
-/* flagged */
-/**"#define F_MINUS 1"*/
-#define FLAG_NEGATIVE 1
+/** flags **/
+/** define F_MINUS 1 **/
+#define F_NEGATIVE 1
 
-/**"#define F_PLUS 2"*/
-#define FLAG_POSITIVE 2
+/** define F_PLUS 2 **/
+#define F_POSITIVE 2
 
-/**"#define F_ZERO 4"*/
-#define FLAG_ZEROT 4
+/** define F_ZERO **/
+#define F_ZEROT 4
 
-/*"#define F_HASH 8"*/
-#define FLAG_HASHES 8
+/** define F_HASH **/
+#define F_HASHES 8
 
-/*"#define F_SPACE 16"*/
-#define FLAG_ACE_B 16
+/** define F_SPACE **/
+#define FLAG_SPACE_B 16
 
-/* sizes */
-/**"#define S_LONG 2"*/
+/** sizes **/
+/** define S_LONG **/
 #define SIZES_LONG 2
 
-/**"#define S_SHORT 1"*/
+/** define S_SHORT **/
 #define SIZES_SHORT 1
 
 /**

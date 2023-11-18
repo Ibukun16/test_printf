@@ -24,11 +24,11 @@ char buffering[], int flagged, char flagged_ch, int gt_width, int gt_precision, 
 int prnt_none_prntble(va_list types, char buffering[],
 	int flagged, int gt_width, int gt_precision, int gt_size);
 
-/* Funcion to print memory address */
+/* Function to print memory address */
 int prnt_ptr(va_list types, char buffering[],
 	int flagged, int gt_width, int gt_precision, int gt_size);
 
-/* Funciotns to handle other specifiers */
+/* Functions to handle other specifiers */
 int get_flagged(const char *format, int *i);
 int get_widths(const char *format, int *i, va_list list);
 int get_precisions(const char *format, int *i, va_list list);
@@ -64,4 +64,4 @@ int isit_digit(char);
 long int cnvrt_siz_num(long int numb, int size);
 long int cnvrt_siz_unsgnd(unsigned long int numb, int size);
 
-#endif /** HEADER_H */
+#endif /** HEADER_H **/
