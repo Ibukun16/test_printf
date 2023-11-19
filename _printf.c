@@ -29,8 +29,6 @@ int _printf(const char *format, ...)
 
 	if (!format || (format[i] == '%' && !format[i++]))
 		return (-1);
-	if (format[i] == '%' && format[i++] == '\0')
-		return (-1);
 	va_start(args_list, format);
 	while (format && format[i])
 	{
