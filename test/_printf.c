@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * _strlen - A function that calculate length of a string
@@ -27,7 +28,7 @@ int _printf(const char *format, ...)
 	char *str, c;
 	va_list args_list;
 
-	if (!format || (format[i] == '%' && !format[i++]))
+	if (!format)
 		return (-1);
 	va_start(args_list, format);
 	while (format && format[i])
@@ -49,6 +50,8 @@ int _printf(const char *format, ...)
 			if (format[i] == 's')
 			{
 				str = va_arg(args_list, char*);
+				if (str == NULL)
+					str = "(null)";
 				l = _strlen(str);
 				write(1, str, l);
 				bytes += l;
